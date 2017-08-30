@@ -1,0 +1,135 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* better box model */
+* { 
+-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+/* General Styles */
+.container {
+	background-image: url(../img/flowerbg.png);
+	background-repeat: repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.floor {
+	position: absolute;
+	height: 400px;
+	width: 100%;
+	bottom: 0;
+	background-image: url("../img/flowerfloor.png");
+	background-repeat: repeat;
+}
+.flowerpot1 {
+	position: absolute;
+	padding-bottom: 140px;
+	bottom: -30px;
+	left: 30px;
+}
+.flowerpot2 {
+	position: absolute;
+	padding-bottom: 140px;
+	bottom: -1px;
+	left: 223px;
+}
+.flowerpot3 {
+	position: absolute;
+	padding-bottom: 140px;
+	bottom: -20px;
+	left: 423px;
+}
+.murphy {
+	position: absolute;
+	bottom: 100px;
+	right: 50px;
+	animation-name: murphyrun;
+	animation-duration: .2s;
+	animation-iteration-count:infinite;
+}
+@keyframes murphyrun {
+	0% {content:url("../img/flowermurphy.png");}
+	50% {content:url("../img/flowermurphy2.png");}
+	100% {content:url("../img/flowermurphy.png");}
+}
+.narration {
+	font-family: 'Cambo', serif;
+	font-size: 28px;
+	line-height: 32px;
+	padding: 30px;
+	background-color: white;
+	width: 300px;
+	position: absolute;
+	right: 100px;
+	top: 50px;
+	box-shadow: 10px 10px 5px #888888;
+}
+.narration span {
+	display: block;
+	color: gray;
+	font-style: italic;
+	font-size: 20px;
+	line-height: 23px;
+	padding-top: 10px;
+}
+.homepaw {
+	position: absolute;
+	display: none;
+	transition: opacity 1s;
+	opacity: 0;
+	bottom: 50px;
+	right: 50px;
+}
+.pawprintanimate {
+	animation-name: pawbob;
+	animation-duration: 1s;
+	animation-iteration-count:infinite;
+}
+@keyframes pawbob {
+	0% {
+		padding-bottom: 0;
+	}
+	50% {
+		padding-bottom: 10px;
+	}
+	100% {
+		padding-bottom: 0;
+	}
+}
+.murphyrun {
+	animation-name: turnandrun;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+}
+@keyframes turnandrun {
+	40% {
+		left: 0;
+		transform: scaleX(-1);
+	}
+	100% {
+		left: 200%;
+		transform: scaleX(-1);
+	}
+}
+/* Common Classes */
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+.clear {
+	clear: both;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
